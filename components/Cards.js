@@ -28,11 +28,24 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
         console.log(response.data)
         const cards = document.querySelector('.cards-container')
         console.log(response.data.articles)
-        for(var key in response.data.articles){
+        for(let key in response.data.articles){
+            console.log(key)
             response.data.articles[key].forEach(element => {
                 const newCard = cardMaker(element)
-                cards.appendChild(newCard)
-            });
+                document.querySelectorAll('.tab').forEach(tabElement => {
+                    tabElement.addEventListener('click', event => {
+                        console.log(key)
+                        console.log(event.target.outerText, " first")
+                        if(!event.target.outerText.toLowerCase().includes(key)){
+                            console.log(event.target.outerText, "hello")
+                            newCard.style.display = 'none'
+                        } else {
+                            newCard.style.display = 'inline-block'
+                        }
+                    })
+                })
+            cards.appendChild(newCard)
+            })
         }
     })
     .catch(errorResponse =>{
