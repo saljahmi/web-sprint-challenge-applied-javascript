@@ -28,13 +28,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is the DOM?
 
+It is the document object model of the page that is created when the page is loaded. The browser uses Javascript to create this object model, utilising the html as a blueprint. 
+
 2. What is an event?
+
+Events are user interactions with the site, such as a click, scrolling, mousing over, etc.
 
 3. What is an event listener?
 
+An event listener is added to an element and executes a callback when the specified event occurs. 
+
 4. Why would we convert a NodeList into an Array?
 
+A NodeList is an array-like object, but can only use the forEach array method. So, you can use .from to convert the NodeList to and Array and be able to apply all array methods to it. 
+
 5. What is a component?
+
+A component has html, css, or javascript brought together so that it can be reused in a website. With this, you can retrieve data to create the components to modify the html, making the site more dynamic. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

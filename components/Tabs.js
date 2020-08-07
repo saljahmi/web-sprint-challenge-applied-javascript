@@ -18,8 +18,6 @@ axios.get('https://lambda-times-api.herokuapp.com/topics')
 .then(response => {
     debugger
     console.log(response)
-    const topics = document.querySelector('.topics')
-    console.log(topics)
     response.data.topics.forEach(element => {
         const newTab= topic(element)
         topics.appendChild(newTab)
